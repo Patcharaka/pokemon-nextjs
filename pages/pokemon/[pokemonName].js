@@ -3,10 +3,10 @@ import {useRouter} from 'next/router'
 import Detail from '../../components/Detail'
 export default function PokemonPage() {
   const router = useRouter()
-  const {pokemonName} = router.query
+  const pokemon = router.query
   return (
     <div>
-      <Detail pokemonName={pokemonName} />
+      <Detail pokemonName={pokemon.pokemon} />
     </div>
   )
 }

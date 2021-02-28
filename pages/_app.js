@@ -3,10 +3,14 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import 'semantic-ui-css/semantic.min.css'
+// import {useStore} from '../store'
+// import {Provider} from 'react-redux'
 
 export default function CMApp({Component, pageProps}) {
+  // const store = useStore(pageProps.initialReduxState)
   return (
-    <div>
+    <>
+      {/* <Provider store={store}> */}
       <Head>
         <title>Pokemon View</title>
       </Head>
@@ -23,6 +27,7 @@ export default function CMApp({Component, pageProps}) {
         },
 
       `}</style>
-    </div>
+      {/* </Provider> */}
+    </>
   )
 }

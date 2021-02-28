@@ -7,7 +7,7 @@ const fetchPokemonName = (pokemonName) =>
 
 export default function detail({pokemonName}) {
   const {data, error} = useSWR(pokemonName, fetchPokemonName)
-  if (error) return <div>No rates today</div>
+  if (error) return <div>Error </div>
   if (!data) return <div>Loading... wait patiently</div>
 
   return (
@@ -15,7 +15,7 @@ export default function detail({pokemonName}) {
       <Item.Group>
         <Item>
           <Item.Image
-            size='large'
+            size='medium'
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data?.id}.svg`}
           />
           <Item.Content>
